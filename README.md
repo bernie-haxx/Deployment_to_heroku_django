@@ -150,12 +150,12 @@ below is an example of configurations you can add to the `.env` file.
 ```python
 #just an example, dont share your .env settings
 SECRET_KEY='342s(s(!hsjd998sde8$=o4$3m!(o+kce2^97kp6#ujhi'
-DEBUG=True #set to false in production
+DEBUG=True
 DB_NAME='tribune'
 DB_USER='user'
 DB_PASSWORD='password'
 DB_HOST='127.0.0.1'
-MODE='dev' #set to 'prod' in production
+MODE='dev'
 ALLOWED_HOSTS='<app name in heroku>.herokuapp.com'
 DISABLE_COLLECTSTATIC=1
 ```
@@ -203,7 +203,7 @@ First make sure you are in the root directory of the repository you want to depl
 
 Next create the heroku app
 ```bash
-heroku create worldofcomicon
+heroku create <your-app>
 ```
 Create a postgres addon to your heroku app
 ```bash
@@ -230,7 +230,7 @@ Remember to first set `DEBUG` to false and confirm that you have added all the c
 confirm that your application is running as expected before pushing, runtime errors will cause deployment to fail so make sure you have no bugs, you have all the following `Procfile`, `requirements.txt` with all required packages and  `runtime.txt` .
 
 ```bash
-git push heroku master
+$ git push heroku master
 ```
 If you did everything correctly then the deployment should be done after a while with an output like this
 
@@ -295,12 +295,12 @@ To https://git.heroku.com/mtr1bune.git
 
  ### Run migrations
  ```bash
- heroku run python manage.py migrate
+ $ heroku run python manage.py migrate
 ```
 
 If you instead wish to push your postgres database data to heroku then run
 ```bash
-heroku pg:push <The name of the db in the local psql> DATABASE_URL --app <heroku-app>
+$ heroku pg:push <The name of the db in the local psql> DATABASE_URL --app <heroku-app>
 ```
 You can the open the app in your browser [mtribune](http://mtr1bune.herokuapp.com/ )
 
