@@ -19,6 +19,8 @@ Authentication successful.
 In this tutorial I will deploy an existing project, [moringa-tribune-hosting](https://github.com/newtonkiragu/mtribune-hosting).
 It's an very simple open-source Django project, that shows news posted.
 Its available on [github](https://github.com/newtonkiragu/mtribune-hosting) so you can actually clone the repository and follow along or try it on your own existing django project.if you had problems with making the repo in heroku you can run :
+
+And do this in the root folder where the manage.py is...i think you might find it.
 ```bash 
 heroku git:remote -a <application name>
 ```
@@ -300,6 +302,7 @@ To https://git.heroku.com/mtr1bune.git
 
 If you instead wish to push your postgres database data to heroku then run
 ```bash
+$ heroku pg:reset
 $ heroku pg:push <The name of the db in the local psql> DATABASE_URL --app <heroku-app>
 ```
 You can the open the app in your browser [mtribune](http://mtr1bune.herokuapp.com/ )
