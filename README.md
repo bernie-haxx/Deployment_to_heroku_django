@@ -83,17 +83,8 @@ Turns out django does not support serving static files in production. However, W
 
 Lets first install Whitenoise   `pip install whitenoise`
 
-Add the Whitenoise to your Django application in the wsgi.py file:
-```python 
-import os
-from django.core.wsgi import get_wsgi_application
-from whitenoise.django import DjangoWhiteNoise
+It is not a must to edit the wsgi.py file because there is an update available so let's just ignore it.
 
-os.environ.setdefault("DJANGO_SETTINGS_MODULE", "<project name>.settings")
-
-application = get_wsgi_application()
-application = DjangoWhiteNoise(application)
-```
 Next, install `WhiteNoise` into your Django application. This is done in `settings.py’s middleware section` (at the top):
 ```python 
 MIDDLEWARE_CLASSES = (
