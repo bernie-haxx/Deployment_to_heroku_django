@@ -16,14 +16,9 @@ Authentication successful.
 ```
 
 # Preparing the Application
-In this tutorial I will deploy an existing project, [moringa-tribune-hosting](https://github.com/newtonkiragu/mtribune-hosting).
-It's an very simple open-source Django project, that shows news posted.
-Its available on [github](https://github.com/newtonkiragu/mtribune-hosting) so you can actually clone the repository and follow along or try it on your own existing django project.if you had problems with making the repo in heroku you can run :
-
-And do this in the root folder where the manage.py is...i think you might find it.
-```bash 
-heroku git:remote -a <application name>
-```
+In this tutorial I will be using a repo which is in development which is [ArtExtractKe](https://github.com/Benard18/ArtExtractKe)
+It's an very simple  Django project, that shows various categories and their companies.
+Its available on [github](https://github.com/Benard18/ArtExtractKe) so you can actually clone the repository and follow along or try it on your own existing django project.
 
 ## Assumptions
 * Your familiar with the basics of django e.g concept of apps, settings, urls, basics of databases 
@@ -198,6 +193,7 @@ Next create the heroku app
 ```bash
 heroku create <your-app>
 ```
+
 Create a postgres addon to your heroku app
 ```bash
 heroku addons:create heroku-postgresql:hobby-dev
@@ -224,6 +220,12 @@ confirm that your application is running as expected before pushing, runtime err
 
 ```bash
 $ git push heroku master
+```
+
+if you find an error where the heroku git initialization has turned out unsuccessful; run the following command
+```
+bash
+$ heroku git:remote -a <application-name>
 ```
 If you did everything correctly then the deployment should be done after a while with an output like this
 
