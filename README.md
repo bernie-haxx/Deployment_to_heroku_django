@@ -298,7 +298,7 @@ If you instead wish to push your postgres database data to heroku then run
 $ heroku pg:reset
 $ heroku pg:push <The name of the db in the local psql> DATABASE_URL --app <heroku-app>
 ```
-You can the open the app in your browser [mtribune](http://mtr1bune.herokuapp.com/ )
+You can the open the app in your browse.
 
 # Comment
 This process was a lot and you can easily mess up as I did, I suggest analyzing the part where you went wrong and going back to read on what you are supposed to do. I also highly recommend going through official documentations about deploying python projects to heroku as you will get a lot information that can help you debug effectively. I will provide some links in the resources section.
