@@ -1,6 +1,7 @@
 How to Deploy Django Applications on Heroku
 ===========================================
 
+![heroku-django](https://i2.wp.com/www.helloworldforbeginners.com/wp-content/uploads/2016/02/python-heroku.png?fit=512%2C256)
 # Install heroku CLI
 [Sign up](https://signup.heroku.com/) to Heroku.
 
